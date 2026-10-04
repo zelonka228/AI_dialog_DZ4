@@ -1,5 +1,5 @@
 # Секретные ключи API (не коммитить)
-AI_dialog/AI_dialog/Services/ApiKeys.cs
+AI_dialog/Services/ApiKeys.cs
 
 # Сборка и среда разработки
 bin/
