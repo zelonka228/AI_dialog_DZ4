@@ -1,0 +1,10 @@
+Скопируйте этот файл в ApiKeys.cs в папке Services и вставьте свои ключи.
+Файл ApiKeys.cs не попадает в git.
+
+namespace AI_dialog.Services;
+
+internal static class ApiKeys
+{
+    public const string OpenRouter = "ВАШ_КЛЮЧ_OPENROUTER";
+    public const string Groq = "ВАШ_КЛЮЧ_GROQ";
+}

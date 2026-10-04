@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AI_dialog.MainPage"
+             Title="AI Chat">
+
+    <Grid RowDefinitions="*,Auto,Auto" Padding="16" RowSpacing="8">
+
+        <ScrollView Grid.Row="0">
+            <Label
+                x:Name="ChatLabel"
+                FontSize="16"
+                LineBreakMode="WordWrap" />
+        </ScrollView>
+
+        <Label
+            Grid.Row="1"
+            x:Name="StatusLabel"
+            FontSize="13"
+            TextColor="Gray" />
+
+        <Grid Grid.Row="2" ColumnDefinitions="*,Auto,Auto,Auto" ColumnSpacing="8">
+            <Entry
+                x:Name="PromptEntry"
+                Placeholder="Введіть повідомлення..."
+                Completed="OnSendClicked" />
+
+            <Picker
+                x:Name="LanguagePicker"
+                Grid.Column="1"
+                Title="Мова"
+                SelectedIndexChanged="OnLanguageChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Російська</x:String>
+                        <x:String>Українська</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+                x:Name="MicButton"
+                Grid.Column="2"
+                Text="🎤"
+                SemanticProperties.Hint="Надиктувати повідомлення голосом"
+                Clicked="OnMicClicked" />
+
+            <Button
+                x:Name="SendButton"
+                Grid.Column="3"
+                Text="Надіслати"
+                Clicked="OnSendClicked" />
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
